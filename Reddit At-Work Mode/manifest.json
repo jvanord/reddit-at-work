@@ -1,0 +1,21 @@
+{
+    //"update_url": "https://clients2.google.com/service/update2/crx",
+    "name": "Reddit A-Work Mode",
+    "version": "1.0",
+    "manifest_version": 2,
+    "description": "Toggle the visibilty of NSFW articles on Reddit",
+    "page_action": {},
+    "permissions": [],
+    "content_scripts": [
+        {
+            "matches": [
+                "http://*.reddit.com/*",
+                "https://*.reddit.com/*"
+            ],
+            "js": [
+                "jquery.min.js",
+                "at-work.js"
+            ]
+        }
+    ]
+}
